@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishu Card Palace - About Us </title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* ===== Digital Printing Section ===== */
+
+.dps-hero {
+    display: flex;
+    min-height: 100vh;
+    background: #ffffff;
+}
+
+/* LEFT */
+.dps-left {
+    flex: 1;
+    background: linear-gradient(135deg, #ff2b2b, #d40000);
+    color: #ffffff;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.dps-badge {
+    background: #1e5eff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    width: fit-content;
+}
+
+.dps-title {
+    font-size: 44px;
+    line-height: 1.2;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.dps-poster-box {
+    background: #111;
+    padding: 15px;
+    border-radius: 16px;
+    width: 260px;
+}
+
+.dps-poster-box img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* RIGHT */
+.dps-right {
+    flex: 1;
+    background: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.dps-right img {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .dps-hero {
+        flex-direction: column;
+    }
+
+    .dps-left {
+        padding: 40px 20px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .dps-title {
+        font-size: 32px;
+    }
+
+    .dps-poster-box {
+        width: 220px;
+    }
+
+    .dps-right {
+        padding: 20px;
+    }
+}
+
+
+
+/* ===== Print & Copy Section ===== */
+
+.pcs-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* TOP */
+.pcs-top {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.pcs-image-box img {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 40px;
+  border: 6px solid #ff2b2b;
+}
+
+.pcs-services {
+  flex: 1;
+}
+
+.pcs-service-item {
+  margin-bottom: 25px;
+}
+
+.pcs-icon {
+  color: #ff2b2b;
+  font-size: 20px;
+}
+
+.pcs-service-item h4 {
+  margin: 8px 0 6px;
+  color: #ff2b2b;
+}
+
+.pcs-service-item p {
+  color: #444;
+  line-height: 1.6;
+}
+
+/* BOTTOM */
+.pcs-bottom {
+  display: flex;
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.pcs-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.pcs-gallery img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.pcs-content h2 {
+  color: #ff2b2b;
+  margin-bottom: 15px;
+}
+
+.pcs-content p {
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.pcs-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.pcs-feature h5 {
+  margin-bottom: 6px;
+  color: #000;
+}
+
+.pcs-feature p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .pcs-top,
+  .pcs-bottom {
+    flex-direction: column;
+  }
+
+  .pcs-features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .pcs-features {
+    grid-template-columns: 1fr;
+  }
+
+  .pcs-image-box img {
+    max-width: 100%;
+  }
+}
+
+
+/* ===== Customer Feedback Section ===== */
+
+.cfb-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+.cfb-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.cfb-header h2 {
+  color: #e60000;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.cfb-header p {
+  max-width: 900px;
+  margin: auto;
+  color: #555;
+  font-size: 14px;
+}
+
+/* FEEDBACK CARDS */
+.cfb-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+.cfb-card {
+  background: #ffe5e5;
+  padding: 20px;
+  border-radius: 18px;
+}
+
+.cfb-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.cfb-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #4285f4, #ea4335, #fbbc05, #34a853);
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cfb-user h4 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.cfb-user span {
+  font-size: 12px;
+  color: #666;
+}
+
+.cfb-card p {
+  font-size: 14px;
+  color: #333;
+}
+
+/* FEATURES */
+.cfb-features {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.cfb-feature-box {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 25px 15px;
+  text-align: center;
+}
+
+.cfb-icon {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.cfb-feature-box h4 {
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.cfb-feature-box p {
+  font-size: 13px;
+  color: #555;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .cfb-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cfb-features {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .cfb-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .cfb-features {
+    grid-template-columns: 1fr;
+  }
+}
+    </style>
+    
+</head>
+<body>
+
+            <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-left">
+                <span><i class="fas fa-phone-alt"></i> +91 97802 42012</span>
+            </div>
+
+            <div class="top-right">
+                <span><i class="far fa-envelope"></i> Yoursite@gmail.com</span>
+                <span><i class="far fa-clock"></i> Monday - Friday : 10:00 - 17:00</span>
+
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container">
+
+            <!-- Logo -->
+            <div class="logo">
+                <img src="./main-logo.png" alt="Logo">
+            </div>
+
+            <!-- Navigation -->
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#" class="active">HOME</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">GALLERY</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                </ul>
+            </nav>
+
+            <!-- Order Button -->
+            <a href="#" class="order-btn">
+                <span class="cart-icon">
+                    <i class="fas fa-cart-plus"></i>
+                </span>
+                <span>ORDER NOW</span>
+            </a>
+
+            <!-- Mobile Menu -->
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+
+        </div>
+    </header>
+
+
+
+
+<section class="dps-hero">
+
+    <!-- LEFT CONTENT -->
+    <div class="dps-left">
+        <span class="dps-badge">Digital Printing Service</span>
+
+        <h1 class="dps-title">
+            Produce Stunning Printing<br>
+            For Your Business
+        </h1>
+
+        <div class="dps-poster-box">
+            <img src="./hero--img---.jpg" alt="3D Wallpaper Poster">
+        </div>
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="dps-right">
+        <img src="./banner---img---hero.jpg" alt="3D Wallpaper Banner">
+    </div>
+
+</section>    
+
+
+
+
+
+
+
+
+<section class="pcs-wrapper">
+
+  <!-- TOP SECTION -->
+  <div class="pcs-top">
+
+    <!-- LEFT IMAGE -->
+    <div class="pcs-image-box">
+      <img src="./img---101--adv.jpg" alt="Bag Printing">
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="pcs-services">
+      <div class="pcs-service-item">
+        <span class="pcs-icon">🖨️</span>
+        <h4>Printing services</h4>
+        <p>Any mechanical process of transferring ink to a paper or with other material in publishing or graphic arts industry.</p>
+      </div>
+
+      <div class="pcs-service-item">
+        <span class="pcs-icon">📄</span>
+        <h4>Digital Scanning</h4>
+        <p>Fast printing, printing flyers and brochures, have been happy with us in the past and plan to print designs in the future.</p>
+      </div>
+
+      <div class="pcs-service-item">
+        <span class="pcs-icon">📑</span>
+        <h4>Copying services</h4>
+        <p>Happy with the past for fast printing, flyer and brochure printing and get for future.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM SECTION -->
+  <div class="pcs-bottom">
+
+    <!-- IMAGE GRID -->
+    <div class="pcs-gallery">
+      <img src="./banner---img---hero.jpg" alt="">
+      <img src="./hero--img---.jpg" alt="">
+      <img src="./img---102.png" alt="">
+      <img src="./contact----info---.jpg" alt="">
+    </div>
+
+    <!-- TEXT CONTENT -->
+    <div class="pcs-content">
+      <h2>Develop Your Brand</h2>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+
+      <div class="pcs-features">
+        <div class="pcs-feature">
+          <h5>Logo Print</h5>
+          <p>Phasellus ornare scelerisque eleifend donec pretium nec.</p>
+        </div>
+        <div class="pcs-feature">
+          <h5>Promotions</h5>
+          <p>Morbi quis commodo odio aenean fames ac vel sed.</p>
+        </div>
+        <div class="pcs-feature">
+          <h5>Flex</h5>
+          <p>Neque sodales ut etiam sit amet nisl purus.</p>
+        </div>
+        <div class="pcs-feature">
+          <h5>Stickers</h5>
+          <p>Magna fermentum vitae justo eget iaculis.</p>
+        </div>
+        <div class="pcs-feature">
+          <h5>Banners</h5>
+          <p>Lobortis vitae justo eget magna fermentum.</p>
+        </div>
+        <div class="pcs-feature">
+          <h5>Packaging</h5>
+          <p>Vitae justo eget magna fermentum iaculis.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+    
+
+
+
+
+
+    
+
+
+
+<!-- customization-section -->
+
+<section class="customization-section">
+    <div class="container">
+
+        <!-- Left Content -->
+        <div class="content-area">
+            <h2>Eye-Catching Customizations</h2>
+
+            <p>
+                In ullamcorper blandit porta. Aenean venenatis leo. Vivamus
+                imperdiet vel nisl ac lobortis. Praesent ex diam, sollicitudin
+                in sapien nec, hendrerit rutrum odio.
+            </p>
+
+            <ul class="feature-list">
+                <li>
+                    <strong>Embraided & Printed T-Shirts</strong>
+                    <span>Cursus metus aliquam eleifend mi in nulla posuere.</span>
+                </li>
+
+                <li>
+                    <strong>Lightweight Customized Water Bottles</strong>
+                    <span>Bibendum at varius vel pharetra vel.</span>
+                </li>
+
+                <li>
+                    <strong>Custom Printed Laptop Bags</strong>
+                    <span>Elementum tempus egestas sed sed risus pretium.</span>
+                </li>
+
+                <li>
+                    <strong>Professional & Stylish Personalized Pens</strong>
+                    <span>Semper risus in hendrerit gravida.</span>
+                </li>
+
+                <li>
+                    <strong>Branded Portable Power Bank</strong>
+                    <span>Imperdiet massa tincidunt nunc pulvinar sapien.</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Right Images -->
+        <div class="gallery-area">
+
+            <div class="gallery-item tall">
+                <img src="./img---101.png" alt="">
+            </div>
+
+            <div class="gallery-item">
+                <img src="./img---102.png" alt="">
+            </div>
+
+            <div class="gallery-item">
+                <img src="./img--103.png" alt="">
+            </div>
+
+            <div class="gallery-item tall">
+                <img src="./banner---img---hero.jpg" alt="">
+            </div>
+
+        </div>
+
+    </div>
+</section>    
+
+
+
+
+
+
+
+<section class="cfb-wrapper">
+
+  <!-- HEADING -->
+  <div class="cfb-header">
+    <h2>Customer's Feedbacks</h2>
+    <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+      when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    </p>
+  </div>
+
+  <!-- FEEDBACK CARDS -->
+  <div class="cfb-cards">
+
+    <div class="cfb-card">
+      <div class="cfb-user">
+        <div class="cfb-avatar">G</div>
+        <div>
+          <h4>Aryan</h4>
+          <span>Customer</span>
+        </div>
+      </div>
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+      </p>
+    </div>
+
+    <div class="cfb-card">
+      <div class="cfb-user">
+        <div class="cfb-avatar">G</div>
+        <div>
+          <h4>Aryan</h4>
+          <span>Customer</span>
+        </div>
+      </div>
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+      </p>
+    </div>
+
+    <div class="cfb-card">
+      <div class="cfb-user">
+        <div class="cfb-avatar">G</div>
+        <div>
+          <h4>Aryan</h4>
+          <span>Customer</span>
+        </div>
+      </div>
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- FEATURES -->
+  <div class="cfb-features">
+
+    <div class="cfb-feature-box">
+      <div class="cfb-icon">⚡</div>
+      <h4>Fast Turn Around</h4>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+    </div>
+
+    <div class="cfb-feature-box">
+      <div class="cfb-icon">🛍️</div>
+      <h4>Easy Ordering and Reordering</h4>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+    </div>
+
+    <div class="cfb-feature-box">
+      <div class="cfb-icon">⏱️</div>
+      <h4>24/7 Available</h4>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+    </div>
+
+    <div class="cfb-feature-box">
+      <div class="cfb-icon">📦</div>
+      <h4>Wide Product Range</h4>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+    </div>
+
+    <div class="cfb-feature-box">
+      <div class="cfb-icon">🎯</div>
+      <h4>Promotional Print</h4>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+    
+
+<section class="order-section">
+  <div class="overlay">
+    <div class="contact-form">
+      <div class="contact-info">
+        <h2>Contact Us</h2>
+        <p>📍 Sec 18, Chandigarh 136033</p>
+        <p>✉️ Your098@gmail.com</p>
+        <p>📞 +91 3526 326 325</p>
+
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-instagram"></i>
+        </div>
+      </div>
+
+      <div class="form-area">
+        <h2>Order Your Design</h2>
+        <form>
+          <div class="row">
+            <input type="text" placeholder="Your Name">
+            <input type="text" placeholder="Last Name">
+          </div>
+          <div class="row">
+            <input type="text" placeholder="Phone Number">
+            <input type="email" placeholder="E Mail">
+          </div>
+          <div class="row">
+            <input type="text" placeholder="Design Name">
+            <input type="text" placeholder="Category">
+          </div>
+          <textarea placeholder="Message"></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Font Awesome for icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>    
+
+
+
+
+
+
+<footer class="footer">
+  <div class="footer-container">
+    
+    <div class="footer-box about">
+      <p>
+        Role in supplementing formal education and helping students achieve their goals. 
+        In such a situation the Regulatory guidelines are a blessing in disguise for the students. 
+        Coaching centers include a center established run or the way they wish.
+      </p>
+      <h3>Follow US</h3>
+      <div class="social-icons">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+      </div>
+    </div>
+
+    <div class="footer-box links">
+      <h3>About Us</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Fees</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Contact us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-box links">
+      <h3>Quick Link</h3>
+      <ul>
+        <li><a href="#">Browser</a></li>
+        <li><a href="#">Teachers</a></li>
+        <li><a href="#">Testimonials</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Contact form</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-box contact">
+      <h3>Get In Touch</h3>
+      <p><i class="fas fa-map-marker-alt"></i> Sec 18, Chandigarh 136033</p>
+      <p><i class="fas fa-envelope"></i> Your098@gmail.com</p>
+      <p><i class="fas fa-phone"></i> +91 3526 326 325</p>
+    </div>
+
+  </div>
+</footer>
+
+    
+
+
+
+<script>
+const menuBtn = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+});
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
