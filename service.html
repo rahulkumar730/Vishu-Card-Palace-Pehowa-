@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishu Card Palace - Service </title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* ===== Print Service Hero ===== */
+
+.psh-hero {
+  position: relative;
+  background: url("image(2).png") center/cover no-repeat;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.psh-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+}
+
+/* CONTAINER */
+.psh-container {
+  position: relative;
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  color: #fff;
+}
+
+/* LEFT */
+.psh-left {
+  flex: 1;
+  text-align: center;
+}
+
+.psh-product {
+  max-width: 320px;
+  width: 100%;
+  filter: drop-shadow(0 15px 30px rgba(0,0,0,0.6));
+}
+
+/* RIGHT */
+.psh-right {
+  flex: 1;
+  position: relative;
+}
+
+.psh-title {
+  font-size: 52px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.psh-title span {
+  color: #ff2b2b;
+  font-weight: 800;
+}
+
+/* BADGE */
+.psh-badge {
+  width: 130px;
+  height: 130px;
+  background: #ff2b2b;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+  margin: 30px 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* WAVE DECOR */
+.psh-wave {
+  width: 200px;
+  height: 6px;
+  background: repeating-linear-gradient(
+    90deg,
+    #fff 0 20px,
+    transparent 20px 30px
+  );
+  margin-bottom: 30px;
+}
+
+/* BUTTON */
+.psh-btn {
+  display: inline-block;
+  padding: 14px 34px;
+  background: #ff2b2b;
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.psh-btn:hover {
+  background: #d80000;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .psh-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .psh-title {
+    font-size: 38px;
+  }
+
+  .psh-badge {
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .psh-title {
+    font-size: 30px;
+  }
+
+  .psh-product {
+    max-width: 240px;
+  }
+}
+
+
+
+
+/* ===== Discover Customized Printing ===== */
+
+.dcp-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+.dcp-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.dcp-header h2 {
+  color: #e60000;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.dcp-header p {
+  max-width: 900px;
+  margin: auto;
+  font-size: 14px;
+  color: #555;
+}
+
+/* TOP CARDS */
+.dcp-cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+.dcp-card {
+  border: 1px solid #aaa;
+  border-radius: 14px;
+  padding: 25px 15px;
+  text-align: center;
+}
+
+.dcp-card h4 {
+  margin-bottom: 10px;
+}
+
+.dcp-card p {
+  font-size: 13px;
+  color: #555;
+}
+
+/* BOTTOM SECTION */
+.dcp-bottom {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+/* IMAGE */
+.dcp-image-box img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 40px;
+  border: 6px solid #ff2b2b;
+}
+
+/* SERVICES */
+.dcp-services {
+  flex: 1;
+}
+
+.dcp-service-item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.dcp-icon {
+  font-size: 22px;
+  color: #ff2b2b;
+}
+
+.dcp-service-item h4 {
+  color: #ff2b2b;
+  margin-bottom: 5px;
+}
+
+.dcp-service-item p {
+  color: #444;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .dcp-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .dcp-bottom {
+    flex-direction: column;
+  }
+
+  .dcp-image-box img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .dcp-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+
+
+/* ===== Counter Section ===== */
+
+.cnts-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #031a3a, #02142d);
+  padding: 40px 20px;
+  color: #fff;
+  font-family: 'Georgia', serif;
+}
+
+.cnts-box {
+  flex: 1;
+  text-align: center;
+}
+
+.cnts-number {
+  font-size: 56px;
+  font-weight: bold;
+}
+
+.cnts-box p {
+  font-size: 22px;
+  margin-top: 6px;
+}
+
+.cnts-divider {
+  width: 1px;
+  height: 80px;
+  background: rgba(255,255,255,0.4);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .cnts-wrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .cnts-divider {
+    width: 80px;
+    height: 1px;
+  }
+
+  .cnts-number {
+    font-size: 42px;
+  }
+
+  .cnts-box p {
+    font-size: 18px;
+  }
+}
+    </style>
+
+</head>
+
+
+<body>
+     <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-left">
+                <span><i class="fas fa-phone-alt"></i> +91 97802 42012</span>
+            </div>
+
+            <div class="top-right">
+                <span><i class="far fa-envelope"></i> Yoursite@gmail.com</span>
+                <span><i class="far fa-clock"></i> Monday - Friday : 10:00 - 17:00</span>
+
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container">
+
+            <!-- Logo -->
+            <div class="logo">
+                <img src="./main-logo.png" alt="Logo">
+            </div>
+
+            <!-- Navigation -->
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#" class="active">HOME</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">SERVICE</a></li>
+                    <li><a href="#">GALLERY</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                </ul>
+            </nav>
+
+            <!-- Order Button -->
+            <a href="#" class="order-btn">
+                <span class="cart-icon">
+                    <i class="fas fa-cart-plus"></i>
+                </span>
+                <span>ORDER NOW</span>
+            </a>
+
+            <!-- Mobile Menu -->
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+
+        </div>
+    </header>
+
+
+<section class="psh-hero">
+  <div class="psh-overlay"></div>
+
+  <div class="psh-container">
+
+    <!-- LEFT PRODUCT -->
+    <div class="psh-left">
+      <img src="./banner---img---hero.jpg" alt="Printed T-Shirt" class="psh-product">
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="psh-right">
+      <h1 class="psh-title">
+        Breathing life <br>
+        <span>INTO YOUR PRINT</span>
+      </h1>
+
+      <div class="psh-badge">
+        Best<br>Printing<br>Service
+      </div>
+
+      <div class="psh-wave"></div>
+
+      <a href="#" class="psh-btn">Order Now</a>
+    </div>
+
+  </div>
+</section>    
+
+
+
+
+
+
+<section class="dcp-wrapper">
+
+  <!-- HEADER -->
+  <div class="dcp-header">
+    <h2>Discover Customized Printing</h2>
+    <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+      when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    </p>
+  </div>
+
+  <!-- TOP CARDS -->
+  <div class="dcp-cards">
+    <div class="dcp-card">
+      <h4>Promotional Print</h4>
+      <p>Lorem Ipsum is simply dummy text of the printing industry.</p>
+    </div>
+    <div class="dcp-card">
+      <h4>Promotional Print</h4>
+      <p>Lorem Ipsum is simply dummy text of the printing industry.</p>
+    </div>
+    <div class="dcp-card">
+      <h4>Promotional Print</h4>
+      <p>Lorem Ipsum is simply dummy text of the printing industry.</p>
+    </div>
+    <div class="dcp-card">
+      <h4>Promotional Print</h4>
+      <p>Lorem Ipsum is simply dummy text of the printing industry.</p>
+    </div>
+    <div class="dcp-card">
+      <h4>Promotional Print</h4>
+      <p>Lorem Ipsum is simply dummy text of the printing industry.</p>
+    </div>
+  </div>
+
+  <!-- BOTTOM SECTION -->
+  <div class="dcp-bottom">
+
+    <!-- IMAGE -->
+    <div class="dcp-image-box">
+      <img src="./hero--img---.jpg" alt="Customized Bag Printing">
+    </div>
+
+    <!-- SERVICES -->
+    <div class="dcp-services">
+
+      <div class="dcp-service-item">
+        <span class="dcp-icon">🖨️</span>
+        <div>
+          <h4>Printing services</h4>
+          <p>Any mechanical process of transferring ink to a paper or with other material in publishing or graphic arts industry.</p>
+        </div>
+      </div>
+
+      <div class="dcp-service-item">
+        <span class="dcp-icon">📄</span>
+        <div>
+          <h4>Digital Scanning</h4>
+          <p>Fast printing, printing flyers and brochures, have been happy with us in the past and plan to print designs in the future.</p>
+        </div>
+      </div>
+
+      <div class="dcp-service-item">
+        <span class="dcp-icon">📑</span>
+        <div>
+          <h4>Copying services</h4>
+          <p>Happy with the past for fast printing, flyer and brochure printing and get for future.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+
+<section class="cnts-wrapper">
+
+  <div class="cnts-box">
+    <h2 class="cnts-number" data-target="2845">0</h2>
+    <p>Satisfied Clients</p>
+  </div>
+
+  <div class="cnts-divider"></div>
+
+  <div class="cnts-box">
+    <h2 class="cnts-number" data-target="1565">0</h2>
+    <p>Completed Delivery</p>
+  </div>
+
+  <div class="cnts-divider"></div>
+
+  <div class="cnts-box">
+    <h2 class="cnts-number" data-target="2845">0</h2>
+    <p>Awards Winner</p>
+  </div>
+
+</section>
+
+
+
+
+
+
+<section class="order-section">
+  <div class="overlay">
+    <div class="contact-form">
+      <div class="contact-info">
+        <h2>Contact Us</h2>
+        <p>📍 Sec 18, Chandigarh 136033</p>
+        <p>✉️ Your098@gmail.com</p>
+        <p>📞 +91 3526 326 325</p>
+
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-instagram"></i>
+        </div>
+      </div>
+
+      <div class="form-area">
+        <h2>Order Your Design</h2>
+        <form>
+          <div class="row">
+            <input type="text" placeholder="Your Name">
+            <input type="text" placeholder="Last Name">
+          </div>
+          <div class="row">
+            <input type="text" placeholder="Phone Number">
+            <input type="email" placeholder="E Mail">
+          </div>
+          <div class="row">
+            <input type="text" placeholder="Design Name">
+            <input type="text" placeholder="Category">
+          </div>
+          <textarea placeholder="Message"></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Font Awesome for icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>      
+
+
+
+
+
+
+
+
+    <footer class="footer">
+  <div class="footer-container">
+    
+    <div class="footer-box about">
+      <p>
+        Role in supplementing formal education and helping students achieve their goals. 
+        In such a situation the Regulatory guidelines are a blessing in disguise for the students. 
+        Coaching centers include a center established run or the way they wish.
+      </p>
+      <h3>Follow US</h3>
+      <div class="social-icons">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+      </div>
+    </div>
+
+    <div class="footer-box links">
+      <h3>About Us</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Fees</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Contact us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-box links">
+      <h3>Quick Link</h3>
+      <ul>
+        <li><a href="#">Browser</a></li>
+        <li><a href="#">Teachers</a></li>
+        <li><a href="#">Testimonials</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Contact form</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-box contact">
+      <h3>Get In Touch</h3>
+      <p><i class="fas fa-map-marker-alt"></i> Sec 18, Chandigarh 136033</p>
+      <p><i class="fas fa-envelope"></i> Your098@gmail.com</p>
+      <p><i class="fas fa-phone"></i> +91 3526 326 325</p>
+    </div>
+
+  </div>
+</footer>
+
+  
+    
+
+
+
+
+
+<script>
+const menuBtn = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+});
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const counters = document.querySelectorAll(".cnts-number");
+  let started = false;
+
+  const startCount = () => {
+    counters.forEach(counter => {
+      const target = +counter.dataset.target;
+      let count = 0;
+      const speed = 200; // lower = faster
+
+      const updateCount = () => {
+        const inc = Math.ceil(target / speed);
+        count += inc;
+
+        if (count < target) {
+          counter.innerText = count + "+";
+          requestAnimationFrame(updateCount);
+        } else {
+          counter.innerText = target + "+";
+        }
+      };
+
+      updateCount();
+    });
+  };
+
+  const observer = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting && !started) {
+      started = true;
+      startCount();
+    }
+  }, { threshold: 0.5 });
+
+  observer.observe(document.querySelector(".cnts-wrapper"));
+});
+
+
+
+
+
+
+</script>    
+</body>
+</html>
