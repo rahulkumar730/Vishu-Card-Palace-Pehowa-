@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishu Card Palace - Contact Us </title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+      .print-hero {
+  position: relative;
+  min-height: 90vh;
+  background: url("./banner---img---hero.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Dark overlay */
+.print-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 1;
+}
+
+/* Main content */
+.print-hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+/* Product image */
+.print-hero__product img {
+  max-width: 360px;
+  width: 100%;
+  filter: drop-shadow(0 10px 30px rgba(0,0,0,0.4));
+}
+
+/* Text area */
+.print-hero__text {
+  color: #fff;
+  max-width: 600px;
+}
+
+.print-hero__subtitle {
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #f2f2f2;
+}
+
+.print-hero__title {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.print-hero__title span {
+  color: #ff3b3b;
+}
+
+/* Badge */
+.print-hero__badge {
+  margin: 30px 0;
+  width: 140px;
+  height: 140px;
+  background: #ff3b3b;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.2;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* Button */
+.print-hero__btn {
+  display: inline-block;
+  padding: 14px 36px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.print-hero__btn:hover {
+  background: #ff3b3b;
+  border-color: #ff3b3b;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .print-hero__content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .print-hero__title {
+    font-size: 42px;
+  }
+
+  .print-hero__badge {
+    margin: 20px auto;
+  }
+}
+
+
+.contact-cards {
+  padding: 80px 20px;
+  background: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.contact-cards__wrap {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* Card */
+.contact-card {
+  background: #fff;
+  border: 2px dashed #ddd;
+  border-radius: 14px;
+  padding: 40px 30px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.contact-card--active {
+  transform: translateY(-20px);
+}
+
+/* Icon */
+.contact-card__icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 20px;
+  background: #fff2ee;
+  color: #ff6a3d;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+}
+
+/* Text */
+.contact-card p {
+  color: #777;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.contact-card h4 {
+  color: #111;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+/* Link */
+.contact-card__link {
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ff6a3d;
+  text-decoration: none;
+}
+
+/* Hover */
+.contact-card:hover {
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .contact-cards__wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card--active {
+    transform: none;
+  }
+}
+
+
+.print-services {
+  padding: 90px 20px;
+  background: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.print-services__wrap {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Image section */
+.print-services__image {
+  border: 6px solid #ff2d2d;
+  border-radius: 50% 50% 50% 0;
+  overflow: hidden;
+}
+
+.print-services__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Content */
+.print-services__content {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.service-item {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.service-icon {
+  width: 42px;
+  height: 42px;
+  border: 1.5px dashed #ff2d2d;
+  color: #ff2d2d;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.service-item h3 {
+  margin: 0 0 6px;
+  font-size: 24px;
+  color: #ff2d2d;
+  font-weight: 700;
+}
+
+.service-item p {
+  margin: 0;
+  color: #222;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .print-services__wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .print-services__image {
+    max-width: 400px;
+    margin: auto;
+  }
+}
+    </style>
+
+  </head>
+
+
+<body>
+
+<!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-left">
+                <span><i class="fas fa-phone-alt"></i> +91 97802 42012</span>
+            </div>
+
+            <div class="top-right">
+                <span><i class="far fa-envelope"></i> Yoursite@gmail.com</span>
+                <span><i class="far fa-clock"></i> Monday - Friday : 10:00 - 17:00</span>
+
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container">
+
+            <!-- Logo -->
+            <div class="logo">
+                <img src="./main-logo.png" alt="Logo">
+            </div>
+
+            <!-- Navigation -->
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#" class="active">HOME</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">SERVICE</a></li>
+                    <li><a href="#">GALLERY</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                </ul>
+            </nav>
+
+            <!-- Order Button -->
+            <a href="#" class="order-btn">
+                <span class="cart-icon">
+                    <i class="fas fa-cart-plus"></i>
+                </span>
+                <span>ORDER NOW</span>
+            </a>
+
+            <!-- Mobile Menu -->
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+
+        </div>
+    </header>
+
+
+
+<section class="print-hero">
+  <div class="print-hero__overlay"></div>
+
+  <div class="print-hero__content">
+
+    <!-- Left : T-shirt -->
+    <div class="print-hero__product">
+      <img src="./hero--img---.jpg" alt="T-shirt Design">
+    </div>
+
+    <!-- Right : Text content -->
+    <div class="print-hero__text">
+      <h4 class="print-hero__subtitle">Breathing life</h4>
+      <h1 class="print-hero__title">
+        INTO YOUR <span>PRINT</span>
+      </h1>
+
+      <div class="print-hero__badge">
+        Best<br>Printing<br>Service
+      </div>
+
+      <a href="#" class="print-hero__btn">Order Now</a>
+    </div>
+
+  </div>
+</section>    
+
+
+
+
+
+<section class="contact-cards">
+  <div class="contact-cards__wrap">
+
+    <!-- Card 1 -->
+    <div class="contact-card">
+      <div class="contact-card__icon">📞</div>
+      <p>If you need help, don't look far,<br>call us today!</p>
+      <h4>(044)-88812-345-46</h4>
+    </div>
+
+    <!-- Card 2 (center highlight) -->
+    <div class="contact-card contact-card--active">
+      <div class="contact-card__icon">📍</div>
+      <p>Visit our office<br>9 am to 6 pm Mon to satday.</p>
+      <h4>Boat House, 152 City Road<br>Hx N1 6NG, UK.</h4>
+      <a href="#" class="contact-card__link">→ VIEW ON MAP</a>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="contact-card">
+      <div class="contact-card__icon">✉️</div>
+      <p>Do you have a project to work?<br>send your details.</p>
+      <h4>info@example.com</h4>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<section class="print-services">
+  <div class="print-services__wrap">
+
+    <!-- Left Image -->
+    <div class="print-services__image">
+      <img src="./hero--img---.jpg" alt="Printing Bag">
+    </div>
+
+    <!-- Right Content -->
+    <div class="print-services__content">
+
+      <div class="service-item">
+        <span class="service-icon">🖨️</span>
+        <div>
+          <h3>Printing services</h3>
+          <p>
+            Any mechanical process of transferring ink to a paper or with
+            other material in publishing or graphic arts industry.
+          </p>
+        </div>
+      </div>
+
+      <div class="service-item">
+        <span class="service-icon">📄</span>
+        <div>
+          <h3>Digital Scanning</h3>
+          <p>
+            Fast printing, printing flyers and brochures, have been happy
+            with us in the past and plan to print designs in the future.
+          </p>
+        </div>
+      </div>
+
+      <div class="service-item">
+        <span class="service-icon">📑</span>
+        <div>
+          <h3>Copying services</h3>
+          <p>
+            Happy with the past for fast printing, flyer and brochure
+            printing and get for future.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+    
+<section class="order-section">
+  <div class="overlay">
+    <div class="contact-form">
+      <div class="contact-info">
+        <h2>Contact Us</h2>
+        <p>📍 Sec 18, Chandigarh 136033</p>
+        <p>✉️ Your098@gmail.com</p>
+        <p>📞 +91 3526 326 325</p>
+
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-instagram"></i>
+        </div>
+      </div>
+
+      <div class="form-area">
+        <h2>Order Your Design</h2>
+        <form>
+          <div class="row">
+            <input type="text" placeholder="Your Name">
+            <input type="text" placeholder="Last Name">
+          </div>
+          <div class="row">
+            <input type="text" placeholder="Phone Number">
+            <input type="email" placeholder="E Mail">
+          </div>
+          <div class="row">
+            <input type="text" placeholder="Design Name">
+            <input type="text" placeholder="Category">
+          </div>
+          <textarea placeholder="Message"></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Font Awesome for icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>    
+
+
+
+
+<footer class="footer">
+  <div class="footer-container">
+    
+    <div class="footer-box about">
+      <p>
+        Role in supplementing formal education and helping students achieve their goals. 
+        In such a situation the Regulatory guidelines are a blessing in disguise for the students. 
+        Coaching centers include a center established run or the way they wish.
+      </p>
+      <h3>Follow US</h3>
+      <div class="social-icons">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+      </div>
+    </div>
+
+    <div class="footer-box links">
+      <h3>About Us</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Fees</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Contact us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-box links">
+      <h3>Quick Link</h3>
+      <ul>
+        <li><a href="#">Browser</a></li>
+        <li><a href="#">Teachers</a></li>
+        <li><a href="#">Testimonials</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Contact form</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-box contact">
+      <h3>Get In Touch</h3>
+      <p><i class="fas fa-map-marker-alt"></i> Sec 18, Chandigarh 136033</p>
+      <p><i class="fas fa-envelope"></i> Your098@gmail.com</p>
+      <p><i class="fas fa-phone"></i> +91 3526 326 325</p>
+    </div>
+
+  </div>
+</footer>    
+
+
+<script>
+const menuBtn = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+});
+
+
+
+
+
+</script>    
+</body>
+</html>
